@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ayham salahat | 161227</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    
+
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span>ayham</span></h1>
+        <h2>Cybersecurity Student</h2>
+        <a href="#about" class="btn">Explore</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+		<section class="profile">
+        <div class="image-container">
+            <img src="ayham.jpg" alt="Ayham Salahat">
+        </div>
+        <div class="profile-text">
+            <h1>Ayham Salahat    Id:161227</h1>
+            <h2>Cybersecurity Student</h2>
+            <p>Hi, I'm a Cybersecurity student at just university, passionate about web development and ethical hacking. 
+        I specialize in secure coding, penetration testing, and web security.</p>
+        </div>
+    </section>
+        
+
+        
+        <a href="mailto:ayham1172004@gmail.com" class="send-email-button">Send Email</a>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <a href="https://www.python.org/" target="_blank" class="skill-box">Python</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-box">JavaScript</a>
+            <a href="https://cplusplus.com/" target="_blank" class="skill-box">C++</a>
+            <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="skill-box">Web Security</a>
+            <a href="https://www.kali.org/" target="_blank" class="skill-box">Penetration Testing</a>
+        </div>
+    </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav ul li a, .btn"); // Select all nav links & Explore button
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                const targetSection = document.querySelector(this.getAttribute("href"));
+                
+                if (targetSection) { 
+                    event.preventDefault(); // Prevent default jump
+                    targetSection.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
